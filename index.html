@@ -6,10 +6,21 @@
 <link rel="icon" href="pics/favicon.png" type="image/x-icon">
 <style>
 body {top: 0; left: 0; width: 99%; height: 97%;
-    position: absolute; display: table}
-  p {display: table-cell; vertical-align: middle; text-align: center}
-
+	position: absolute; display: table
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
+p {display: table-cell; vertical-align: middle; text-align: center}
+div.quoteblock {
+	width: 550px;
+}
+div.cite{
+	text-align: right;
+}
+
 </style>
 </head>
 
@@ -19,12 +30,54 @@ time_is_widget.init({Da_Nang_z418:{}});
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // DOM elements
+  const button = document.querySelector("button");
+  const quote = document.querySelector("div quote");
+  const cite = document.querySelector("div cite");
+
+  async function updateQuote() {
+    // Fetch a random quote from the Quotable API
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    if (response.ok) {
+      // Update DOM elements
+      quote.textContent = data.content;
+      cite.textContent = data.author;
+	  document.getElementById("citeLink").href= "https://www.google.com/search?q="+data.author; 
+	  console.log(data);
+    } else {
+      quote.textContent = "An error occured";
+      console.log(data);
+    }
+  }
+
+  // Attach an event listener to the `button`
+  button.addEventListener("click", updateQuote);
+
+  // call updateQuote once when page loads
+  updateQuote();
+});
+
+</script>
+
+
+
 
 <p>
 <font size="7"><i><b>tùng nguyễn</b></i></font> <br>
+</p>
 
-<br>
+<div class="quoteblock">
+	<quote>loading...</quote>
+	<div class="cite">
+		<a href="#" id="citeLink" target="__blank"><b><i>- <cite>author</cite></i></b></a>
+		<br><br><button class="btn btn-primary">New Quote</div></button>
+	</div>
+</div>
 
+<p>
 <img src="pics/sao5.png" style="width:560px;"><br>
 <br>
 
