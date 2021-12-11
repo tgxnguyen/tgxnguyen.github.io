@@ -45,8 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update DOM elements
       quote.textContent = data.content;
       cite.textContent = data.author;
-	  document.getElementById("citeLink").href= "https://www.google.com/search?q="+data.author; 
-	  console.log(data);
+	  document.getElementById("citeLink").href= "https://www.google.com/search?q=" + data.author;
     } else {
       quote.textContent = "An error occured";
       console.log(data);
