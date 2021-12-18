@@ -20,14 +20,15 @@ div.quoteblock {
 div.cite{
 	text-align: right;
 }
+.btn-newquote {width: 100px;height: 40px}
 
 </style>
 </head>
 
-<script src="//widget.time.is/t.js"></script>
-<script>
-time_is_widget.init({Da_Nang_z418:{}});
-</script>
+<!-- <script src="//widget.time.is/t.js"></script> -->
+<!-- <script> -->
+<!-- time_is_widget.init({Da_Nang_z418:{}}); -->
+<!-- </script> -->
 
 
 <script>
@@ -52,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Attach an event listener to the `button`
-  //button.addEventListener("click", updateQuote);
+  //Attach an event listener to the `button`
+  button.addEventListener("click", updateQuote);
 
-  // call updateQuote once when page loads
+  //call updateQuote once when page loads
   updateQuote();
 });
 
@@ -72,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	<quote>loading...</quote>
 	<div class="cite">
 		<a href="#" id="citeLink" target="__blank"><b><i>- <cite>author</cite></i></b></a>
-		<!--<br><br><button class="btn btn-primary">New Quote</div></button>-->
 	</div>
 </div>
+<br><br><button class="btn btn-newquote">New Quote</div></button>
 
 <p>
 <img src="pics/sao5.png" style="width:560px;"><br>
