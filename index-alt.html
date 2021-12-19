@@ -16,12 +16,16 @@ body {top: 0; left: 0; width: 99%; height: 97%;
 p {display: table-cell; vertical-align: middle; text-align: center}
 div.quoteblock {
 	width: 550px;
+	background-color: white;
+	color: black;
 }
 div.cite{
 	text-align: right;
 }
 .btn-newquote {width: 100px;height: 40px}
-
+.quote{
+	font-size: 25px;
+}
 </style>
 </head>
 
@@ -54,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //Attach an event listener to the `button`
-  //button.addEventListener("click", updateQuote);
+  button.addEventListener("click", updateQuote);
 
   //call updateQuote once when page loads
   updateQuote();
@@ -70,13 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
 </p>
 
 <div class="quoteblock">
-	<quote>loading...</quote>
+	<div class="quote"><quote>loading...</quote></div>
 	<div class="cite">
 		<a href="#" id="citeLink" target="__blank"><b><i>- <cite>author</cite></i></b></a>
 	</div>
 </div>
-<!-- <br><br><button class="btn btn-newquote">New Quote</div></button> -->
-
+<br><button class="btn btn-newquote">New Quote</button>
 <p>
 <img src="pics/sao5.png" style="width:560px;"><br>
 <br>
