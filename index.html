@@ -25,10 +25,10 @@ div.cite{
 </style>
 </head>
 
-<script src="//widget.time.is/t.js"></script>
-<script>
-time_is_widget.init({Da_Nang_z418:{}});
-</script>
+<!-- <script src="//widget.time.is/t.js"></script> -->
+<!-- <script> -->
+<!-- time_is_widget.init({Da_Nang_z418:{}}); -->
+<!-- </script> -->
 
 
 <script>
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update DOM elements
       quote.textContent = data.content;
       cite.textContent = data.author;
-	  document.getElementById("citeLink").href= "https://www.google.com/search?q=" + data.author;
+	  //document.getElementById("citeLink").href= "https://www.google.com/search?q=" + data.author;
     } else {
       quote.textContent = "An error occured";
       console.log(data);
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </p>
 
 <div class="quoteblock">
-	<quote>loading...</quote>
+	<quote>...</quote>
 	<div class="cite">
-		<a href="#" id="citeLink" target="__blank"><b><i>- <cite>author</cite></i></b></a>
+		<a id="citeLink" target="__blank"><b><i>- <cite>...</cite></i></b></a>
 	</div>
 </div>
 <!-- <br><br><button class="btn btn-newquote">New Quote</div></button> -->
