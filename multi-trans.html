@@ -1,0 +1,34 @@
+<title>multi-trans</title>
+<link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+<style>
+input[type=button], input[type=text], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+
+<div style="float: left; width: 50%">
+	<iframe height=100% width=100% src="http://www.informatik.uni-leipzig.de/~duc/Dict/" title="Iframe Example"></iframe>
+</div>
+
+<div style="float: right; width: 50%">
+	<input type="text"><input type="button" value="search dictionary"><br>
+	<iframe id="cam" height=100% width=100% src="https://dictionary.cambridge.org/dictionary/english" title="Iframe Example"></iframe>
+	<script>
+		const [input, button] = document.querySelectorAll('input');
+		const iframe = document.getElementById('cam');
+		button.addEventListener('click', e => {
+			iframe.src = "https://dictionary.cambridge.org/dictionary/english/" + input.value;
+		})
+	</script>
+</div>
+
+
+
+
