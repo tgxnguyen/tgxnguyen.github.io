@@ -16,23 +16,14 @@ body {top: 0; left: 0; width: 99%; height: 97%;
 p {display: table-cell; vertical-align: middle; text-align: center}
 div.quoteblock {
 	width: 550px;
-	background-color: white;
-	color: black;
 }
 div.cite{
 	text-align: right;
 }
 .btn-newquote {width: 100px;height: 40px}
-.quote{
-	font-size: 25px;
-}
+
 </style>
 </head>
-
-<script src="//widget.time.is/t.js"></script>
-<script>
-time_is_widget.init({Da_Nang_z418:{}});
-</script>
 
 
 <script>
@@ -50,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update DOM elements
       quote.textContent = data.content;
       cite.textContent = data.author;
-	  document.getElementById("citeLink").href= "https://www.google.com/search?q=" + data.author;
+	  //document.getElementById("citeLink").href= "https://www.google.com/search?q=" + data.author;
     } else {
       quote.textContent = "An error occured";
       console.log(data);
@@ -58,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //Attach an event listener to the `button`
-  button.addEventListener("click", updateQuote);
+  //button.addEventListener("click", updateQuote);
 
   //call updateQuote once when page loads
   updateQuote();
@@ -74,25 +65,28 @@ document.addEventListener("DOMContentLoaded", () => {
 </p>
 
 <div class="quoteblock">
-	<div class="quote"><quote>loading...</quote></div>
+	<quote>...</quote>
 	<div class="cite">
-		<a href="#" id="citeLink" target="__blank"><b><i>- <cite>author</cite></i></b></a>
+		<a id="citeLink" target="__blank"><b><i>- <cite>...</cite></i></b></a>
 	</div>
 </div>
-<br><button class="btn btn-newquote">New Quote</button>
+<!-- <br><br><button class="btn btn-newquote">New Quote</div></button> -->
+
 <p>
-<img src="pics/sao5.png" style="width:560px;"><br>
+<img src="pics/thumb.png" style="width:560px;"><br>
 <br>
 
-<span style="font-size:16px">danang, vietnam:</span> <span id="Da_Nang_z418" style="font-size:16px">%time%</span> <a style="font-size:16px" href="https://time.is/Da_Nang" id="time_is_link">GMT+7</a>
+<span style="font-size:16px">time in da nang city:</span> <span id="Da_Nang_z418" style="font-size:16px">%time%</span> <a style="font-size:16px" href="https://time.is/Da_Nang" id="time_is_link">gmt+7</a>
 
 <br><br>
 
-<a href="about.html">about</a> //
-<a href="http://jvscholz.com/faq.html">faq</a> //
-<a href="http://youtube.com/c/jamesscholz" target="__blank">youtube</a> //
-<a href="https://drive.google.com/file/d/17CnAyDkTUckt3jNoQjzsUmVlzP1jdp6t/view?usp=sharing" target="__blank">resume</a> //
-<a href="http://jvscholz.com/contact.html">contact</a>
+<a href="sub_pages/about.html">about</a> //
+<a href="sub_pages/faq.html">faq</a> //
+<!-- <a href="https://www.youtube.com/channel/UC3nDcie2W7GdBwH2E1BwMig" target="__blank">youtube</a> // -->
+<a href="https://angelliax.github.io/" target="__blank">blog</a> //
+<a href="sub_pages/contact.html">contact</a> //
+<a href="sub_pages/resume.html">resume</a>
+<!-- <a href="donate_in4.html">donate</a> -->
 
 <br>
 <br>
